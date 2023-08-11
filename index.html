@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font/Bukhari Script.ttf">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!--Configurações-->
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+                green: '#145607',
+            }
+            }
+        }
+        }
+  </script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+  <title>Ecoleta</title>
+</head>
+
+<body class="font-Poppins bg-gray-100 text-gray-900 h-screen">
+  <header class=" p-4 border-b-2 border-[green]">
+    <nav class="flex justify-between items-center w-[92%]  mx-auto">
+        <div class="flex  items-center ">
+            <img class="w-16 cursor-pointer pr-4" src="imagens/logo.png" alt="Ecoleta_logo">
+            C.E Paulo Freire
+
+        </div>
+        <div class="nav-links duration-500 md:static absolute bg-gray-100 md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+            <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-gray-500">
+                <li>
+                    <a class="focus:text-gray-950 focus:border-b-4 border-[green]" href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a class="focus:text-gray-950  focus:border-b-4 border-[green]" href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a class="focus:text-gray-950  focus:border-b-4 border-[green]" href="#materiais">Materiais</a>
+                </li>
+                <li>
+                    <a class="focus:text-gray-950  focus:border-b-4 border-[green]" href="#mercado">Mercado</a>
+                </li>
+                <li>
+                    <a class="focus:text-gray-950  focus:border-b-4 border-[green]" href="#mentoras">Mentoras</a>
+                </li>
+                <li>
+                  <a href="">
+                      <img class="w-10" src="imagens/whatsapp.png" alt="whatsapp">
+                  </a>
+              </li>
+              <li>
+                <a href="">
+                    <img class="w-10" src="imagens/insta.png" alt="insta">
+                </a>
+            </li>
+            </ul>
+        </div>
+        <div class="flex items-center gap-6">   
+            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+        </div>
+</header>
+
+    <main class="max-w-screen-xl mx-auto px-4">
+        <div class="grid md:grid-cols-8 place-items-center gap-8 mt-8" id="inicio">
+            <div class="md:col-span-5">
+                <img src="imagens/1.png" alt="projeto ecoleta">
+                <img class="ml-44 hidden md:block" src="imagens/3.png" alt="lixeiras">
+            </div>
+            <div class="md:col-span-3">
+                <img src="imagens/2.png" alt="descarte">
+            </div>
+        </div>
+
+        <div class="mt-8 md:mt-12" id="sobre">
+            <div class="flex flex-wrap items-start">
+                <div class="md:w-2/3 md:text-left">
+                  <h1 class="bg-[green] w-72 p-2 text-white ml-20 md:text-left text-2xl font-bold" >CONHEÇA O PROJETO!</h1>
+                  <br>
+                    <p class="text-left indent-8 text-xl mt-4 md:mt-0">No Colégio Estadual Professor Paulo Freire, em Pontal do Paraná, os alunos do ensino integral iniciaram um projeto de reciclagem em uma das eletivas, a coleta sustentável. O projeto desenvolvido tem o objetivo de conscientizar os alunos sobre a importância do descarte correto do lixo e da preservação do meio ambiente.</p>
+                </div>
+                <div class="md:w-1/3 mt-8 md:mt-0">
+                    <img src="imagens/4.png" alt="Menina e menino descartando lixo" class="mx-auto">
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-9 place-items-center gap-8 mt-8 md:mt-12" >
+            <div class="md:col-span-2">
+                <img src="imagens/5.png" alt="Menina segurando cesto reciclável" class="mx-auto">
+            </div>
+            <div class="md:col-span-6">
+                <p class="text-left indent-8 text-xl mt-4 md:mt-0">A Ecoleta (como foi denominado o projeto) conta com a participação de toda a comunidade escolar e consiste na coleta seletiva de resíduos sólidos, como garrafas PET, latinhas e caixas de leite. Após a coleta desses materiais, os alunos que levarem os materiais ganham uma quantidade de pontos equivalentes a quantidade de reciclável, e assim podem trocá-los por produtos no mercado da Ecoleta, realizado também pelos alunos nas dependências do colégio.</p>
+            </div>
+            <div class="md:col-span-2 self-end">
+                <img src="imagens/3.png" alt="lixeiras" class="mx-auto">
+            </div>
+        </div>
+
+        <div class="mt-8 md:mt-12" id="materiais">
+            <h1 class="ml-20 text-3xl font-bold">O QUE COLETAMOS:</h1>
+            <div class="flex justify-center items-center mt-8 md:mt-12 space-x-5">
+                <div>
+                    <img src="imagens/6.png" alt="lata" class="w-auto mx-auto">
+                    <h1 class="text-center mt-2">Latinhas de refrigerante</h1>
+                    <p class="text-base font-medium text-center">(100 à 500 anos para se decompor)</p>
+                </div>
+                <div>
+                    <img src="imagens/7.png" alt="garrafa plastica" class="w-auto mx-auto">
+                    <h1 class="text-center mt-2">Garrafa Pet</h1>
+                    <p class="text-base font-medium text-center">(600 anos para se decompor)</p>
+                </div>
+                <div>
+                    <img src="imagens/8.png" alt="caixa de leite" class="w-auto mx-auto">
+                    <h1 class="text-center mt-2">Caixa de leite</h1>
+                    <p class="text-base font-medium text-center">(100 anos para se decompor)</p>
+                </div>
+            </div>
+            <div class="p-4 mt-8 md:mt-12 mx-auto">
+                <img src="imagens/9.png" alt="aviso" class="mx-auto">
+            </div>
+        </div>
+
+        <div class="mt-8 md:mt-12" id="mercado">
+          <h1 class="bg-[green] w-56 p-2 text-white ml-20 md:text-left text-2xl font-bold">DIAS DE COLETA:</h1>
+          <div class="flex flex-col md:flex-row md:items-center md:justify-center md:gap-8 mt-8 md:mt-12">
+              <div>
+                  <img src="imagens/10.png" alt="imagens de coletas" class="w-auto mx-auto md:mx-0 md:mb-4">
+              </div>
+              <div>
+                  <h1 class="text-2xl font-bold text-center md:text-right text-green-600">Matutino:</h1>
+                  <p class="text-base text-center md:text-right">Sexta-feira</p>
+                  <h1 class="text-2xl font-bold text-center md:text-right text-green-600 mt-4 md:mt-0">Vespertino:</h1>
+                  <p class="text-base text-center md:text-right">Quarta-feira</p>
+              </div>
+          </div>
+      </div>
+      
+      
+      
+      <div class="mt-8 md:mt-12" id="mentoras">
+        <h1 class="ml-16 text-3xl font-bold">MENTORAS:</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 md:mt-12">
+            <div class="text-center">
+                <img src="imagens/11.png" alt="Mariana Araki" class="w-auto mx-auto">
+                
+            </div>
+            <div class="text-center hidden md:block self-center">
+                <img src="imagens/12.png" alt="Recicla" class="w-24 mx-auto">
+                
+            </div>
+            <div class="text-center">
+                <img src="imagens/13.png" alt="Sara Tales" class="w-auto mx-auto">
+                <
+            </div>
+        </div>
+    </div>
+    
+    
+    
+
+    </main>
+
+    <footer class="bg-white dark:bg-gray-900 py-6 text-center">
+        <h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Contato</h2>
+        <ul class="text-gray-500 dark:text-gray-400 font-medium mt-4">
+            <li class="mb-4">
+                <a href="https://criarmeulink.com.br/u/1690836433" hover:underline">(41) 3458-3397</a>
+            </li>
+           
+        </ul>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="text-sm text-gray-500 dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Vitória Helena Neumann™</a>. TODOS OS DIREITOS RESERVADOS.</span>
+    </footer>
+</body>
+
+</html>
